@@ -7,25 +7,6 @@ import time
 from GUI import GUI_Block, save_gui_captions
 
 
-def generate_caption(tree, caption):
-    caption += tree['class']
-    if 'children' in tree and len(tree['children']) > 0:
-        child_caption = ''
-        for child in tree['children']:
-            child_caption += generate_caption(child, child_caption) + ' '
-        caption = caption + '{' + child_caption[:-1] + '}'
-    return caption
-
-
-def build_caption(segments):
-    for segment in segments['segments']:
-        subtrees = segment['subtree']
-        caption = ''
-        for subtree in subtrees:
-            caption += generate_caption(subtree, '') + ' '
-        print(caption, '\n')
-
-
 def init_GUI_blocks(gui_block_id, img_path, segments, output_file, show=False):
     guis = []
     for segment in segments['segments']:
