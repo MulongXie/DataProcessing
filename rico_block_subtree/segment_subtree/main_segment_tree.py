@@ -74,13 +74,13 @@ if '__main__':
     save = True
     show = False
     bad_num = 0
-    num = 4463
-    start = 7656  # start point
+    num = 0
+    start = 0  # start point
     end = 100000
-    img_root = 'E:\\Mulong\\Datasets\\rico\\combined\\'
-    block_root = 'E:\\Temp\\rico-block\\'
-    tree_root = 'E:\\Temp\\rico-tree\\'
-    subtree_root = 'E:\\Temp\\rico-subtree\\'
+    img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
+    block_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-json\\'
+    tree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree\\'
+    subtree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'
     for index in range(start, end):
         img_path = img_root + str(index) + '.jpg'
         block_path = block_root + str(index) + '.json'
@@ -90,9 +90,12 @@ if '__main__':
         if not os.path.exists(block_path) or not os.path.exists(tree_path):
             continue
 
+        # ignore existing ones
+        if os.path.exists(subtree_path):
+            continue
+
         start_time = time.clock()
         img, _ = pre.read_img(img_path, resize_height=2560)
-        block_img = cv2.imread(block_root + str(index) + '_blk.png')
 
         blocks = Block.load_blocks(block_path)
         resize_block(blocks, det_height=800, tgt_height=2560, bias=0)
@@ -109,7 +112,6 @@ if '__main__':
         if show:
             board_tree = np.full((2560, 1440, 3), 255, dtype=np.uint8)  # used for draw new labels
             Tree.draw_tree(tree, board_tree, 0)
-            cv2.imshow('blk_img', cv2.resize(block_img, (300, 500)))
             cv2.imshow('block', cv2.resize(board_block, (300, 500)))
             cv2.imshow('tree', cv2.resize(board_tree, (300, 500)))
             cv2.waitKey()

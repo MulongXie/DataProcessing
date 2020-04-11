@@ -33,9 +33,9 @@ def main():
     end = 100000
     gui_block_id = 0
     bad = 0
-    img_root = 'E:\\Mulong\\Datasets\\rico\\combined\\'
-    segment_root = 'E:\\Mulong\\Datasets\\rico\subtree\\rico-subtree\\'
-    output_root = 'E:\\Temp\\rico_caption'
+    img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
+    segment_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'
+    output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico_caption'
 
     for index in range(start, end):
         img_path = pjoin(img_root, str(index) + '.jpg')
@@ -45,12 +45,15 @@ def main():
         if not os.path.exists(segment_path):
             continue
 
+        if os.path.exists(output_path):
+            continue
+
         try:
             segments = json.load(open(segment_path))
         except:
             print('****** Bad Image: %d ******' %bad)
             continue
-        gui_block_id = init_GUI_blocks(gui_block_id, img_path, segments, output_path, show=True)
+        gui_block_id = init_GUI_blocks(gui_block_id, img_path, segments, output_path, show=False)
         print('[%.3fs]' %(time.clock() - time_s), segment_path)
 
 
