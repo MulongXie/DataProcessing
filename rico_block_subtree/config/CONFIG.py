@@ -16,7 +16,7 @@ class Config:
 
         # setting data flow paths
         self.ROOT_INPUT = "E:\\Mulong\\Datasets\\rico\\combined"
-        self.ROOT_OUTPUT = "E:\\Temp\\rico-block"
+        self.ROOT_OUTPUT = "E:\\Mulong\\Datasets\\rico\\subtree\\rico-block-json"
 
         # *** Frozen ***
         self.ROOT_IMG_ORG = pjoin(self.ROOT_INPUT, "org")

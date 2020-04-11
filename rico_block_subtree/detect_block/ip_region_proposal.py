@@ -12,7 +12,7 @@ C = Config()
 
 
 def block_detection(input_img_path, output_root,
-                    num=0, resize_by_height=800, show=False):
+                    num=0, resize_by_height=800, show=False, save_img=False):
     start = time.clock()
     name = input_img_path.split('\\')[-1][:-4]
 
@@ -21,11 +21,12 @@ def block_detection(input_img_path, output_root,
 
     # *** Step 2 *** block processing: detect block -> calculate hierarchy -> detect components in block
     blocks = blk.block_division(grey)
-    blocks = blk.block_add_bkg(blocks, org, grey.shape, show=show)
+    blocks = blk.block_add_bkg(blocks, org, grey.shape)
     blk.block_hierarchy(blocks)
 
     file.save_blocks(pjoin(output_root, name + '.json'), blocks)
-    draw.draw_region(blocks, grey.shape, show=show, write_path=pjoin(output_root, name + '_blk.png'))
-    cv2.imwrite(pjoin(output_root, name + '.png'), org)
+    if show:
+        cv2.imshow('org', cv2.resize(org, (300, 500)))
+    draw.draw_region(blocks, grey.shape, show=show, write_path=pjoin(output_root, name + '_blk.png') if save_img else None)
 
     print("[Compo Detection Completed in %.3f s] %d %s" % (time.clock() - start, num, input_img_path))
