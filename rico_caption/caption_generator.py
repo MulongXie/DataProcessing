@@ -45,9 +45,6 @@ def main():
         if not os.path.exists(segment_path):
             continue
 
-        if os.path.exists(output_path):
-            continue
-
         try:
             segments = json.load(open(segment_path))
         except:
