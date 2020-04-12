@@ -36,8 +36,8 @@ if __name__ == '__main__':
     show = True
     start = 27  # start point
     end = 100000
-    img_root = 'E:\\Mulong\\Datasets\\rico\\combined\\'
-    segment_root = 'E:\\Mulong\\Datasets\\rico\\subtree\\rico-subtree\\'
+    img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
+    segment_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'
 
     for index in range(start, end):
         img_path = pjoin(img_root, str(index) + '.jpg')

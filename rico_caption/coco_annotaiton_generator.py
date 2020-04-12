@@ -15,8 +15,8 @@ def clip_images(image_file, sections, output_root, shrink_ratio=4, show=False):
         clip_path = pjoin(output_root, str(img_id) + '.jpg')
         clip = image[section[1]:section[3], section[0]:section[2]]
         clip = cv2.resize(clip, (int(clip.shape[1]/shrink_ratio), int(clip.shape[0]/shrink_ratio)))
-        img_id += 1
         image_anns.append({'file_name':clip_path, 'id':img_id, 'height':section[3]-section[1], 'width':section[2]-section[0]})
+        img_id += 1
         cv2.imwrite(clip_path, clip)
 
         if show:
@@ -47,7 +47,7 @@ def main():
     caps = sorted(caps, key=lambda x: int(x.split('\\')[-1][:-5]))
     data = {'annotations':[], 'images':[]}
     for i, cap_path in enumerate(caps):
-        print(i, cap_path)
+        print(i, cap_path, img_id)
         cap = json.load(open(cap_path))
         anns, image = cvt_coco_format(cap, clip_root)
         data['annotations'] += anns
