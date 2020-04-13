@@ -9,7 +9,7 @@ class Tree:
         self.token_count = {}
         self.caption = annotations
         self.subtrees = []
-        self.subtrees_encode = []
+        self.subtrees_encoded = []
         self.build_tree()
 
     def build_tree(self):
@@ -47,6 +47,8 @@ class Tree:
                     if token != '':
                         subtree_encode += self.token_map[token] + c
                         token = ''
+                    else:
+                        subtree_encode += c
                     continue
                 token += c
-            self.subtrees_encode.append(subtree_encode)
+            self.subtrees_encoded.append(subtree_encode)
