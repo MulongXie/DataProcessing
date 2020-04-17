@@ -9,6 +9,8 @@ import os
 def draw_tree(tree, board, line=-1):
     color = (rint(0, 255), rint(0, 255), rint(0, 255))
     cv2.rectangle(board, (tree['bounds'][0], tree['bounds'][1]), (tree['bounds'][2], tree['bounds'][3]), color, line)
+    cv2.imshow('b', cv2.resize(board, (300, 500)))
+    cv2.waitKey()
     if 'children' not in tree:
         return
     for child in tree['children']:
@@ -34,7 +36,7 @@ def view_segments(segments, org):
 
 if __name__ == '__main__':
     show = True
-    start = 27  # start point
+    start = 16  # start point
     end = 100000
     img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
     segment_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'

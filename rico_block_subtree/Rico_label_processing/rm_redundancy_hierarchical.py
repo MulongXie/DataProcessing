@@ -99,10 +99,10 @@ def draw_node(node, board, count, layer, shrink_ratio=4):
 
 if '__main__':
     save = True
-    show = False
-    start = 7656  # start point
+    show = True
+    start = 16  # start point
     end = 7657
-    input_root = 'E:\\Mulong\\Datasets\\rico\\combined\\'
+    input_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
     output_root = 'E:\\Temp\\rico-tree'
     for index in range(start, end):
         img_path = input_root + str(index) + '.jpg'
