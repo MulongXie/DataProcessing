@@ -120,10 +120,12 @@ if '__main__':
                     board = np.full((2560, 1440, 3), 255, dtype=np.uint8)  # used for draw new labels
                     cv2.imshow('org', shrink(org, 4))
                     count = draw_node(objs, board, 0, 0)
+                    cv2.imshow('all_labels', board)
+                    cv2.waitKey()
                     print(count)
                 if save:
-                    # joutput = open(pjoin(output_root, str(index) + '.json'), 'w')
-                    joutput = open('sb.json', 'w')
+                    joutput = open(pjoin(output_root, str(index) + '.json'), 'w')
+                    # joutput = open('sb.json', 'w')
                     json.dump(objs, joutput, indent=4)
 
         index += 1
