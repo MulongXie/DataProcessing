@@ -77,7 +77,7 @@ if '__main__':
     save = False
     show = True
     start = 0  # start point
-    end = 10000
+    end = 1000
     input_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
     output_root = 'E:\\Temp\\rico-tree'
     for index in range(start, end):
