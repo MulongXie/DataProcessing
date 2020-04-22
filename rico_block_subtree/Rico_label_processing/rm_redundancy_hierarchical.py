@@ -85,7 +85,7 @@ def draw_node(node, board, count, layer, shrink_ratio=4):
     cv2.putText(board, node['class'], (int((node['bounds'][0] + node['bounds'][2]) / 2) - 50, int((node['bounds'][1] + node['bounds'][3]) / 2)),
                 cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 0, 255), 4)
 
-    print(node['bounds'], layer)
+    print(node['class'])
     cv2.imshow('board', shrink(board, shrink_ratio))
     cv2.waitKey()
     count += 1
@@ -98,12 +98,13 @@ def draw_node(node, board, count, layer, shrink_ratio=4):
 
 
 if '__main__':
-    save = True
+    save = False
     show = True
-    start = 16  # start point
-    end = 7657
-    input_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
-    output_root = 'E:\\Temp\\rico-tree'
+    org = False
+    start = 0  # start point
+    end = 100000
+    input_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
+    output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\simplified\\'
     for index in range(start, end):
         img_path = input_root + str(index) + '.jpg'
         json_path = input_root + str(index) + '.json'
@@ -114,7 +115,8 @@ if '__main__':
             jfile = json.load(open(json_path, encoding="utf8"))
             objs = simplify_objects(jfile)
             if objs is not None:
-                objs = rm_repeated_objects(objs, 5)
+                if not org:
+                    objs = rm_repeated_objects(objs,5)
                 if show:
                     org = cv2.resize(img, (1440, 2560))
                     board = np.full((2560, 1440, 3), 255, dtype=np.uint8)  # used for draw new labels
