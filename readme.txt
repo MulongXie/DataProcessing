@@ -9,7 +9,7 @@ rico_label_processing / label_simplify.py -> 'E:\\Mulong\\Datasets\\gui\\rico\\c
 # *** 3 ***
 # remove labels with identical bounds
 # filter out trivial classes
-rico_label_processing / label_filter.py -> 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree\\'
+rico_label_processing / label_filter.py -> 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'
 
 # *** 4 ***
 # segment subtrees from rico-tree according to block
