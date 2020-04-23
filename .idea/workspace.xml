@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a55004f9-9fde-4152-b824-11ddecd09ec9" name="Default" comment="" />
+    <list default="true" id="a55004f9-9fde-4152-b824-11ddecd09ec9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rico_caption/caption_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/rico_caption/caption_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rico_label_processing/count_class.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/rico_label_processing/count_class.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rico_label_processing/filter_label.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rico_label_processing/rm_redundancy_flat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rico_label_processing/rm_redundancy_hierarchical.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,11 +19,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="filter_label.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rico_block_subtree/Rico_label_processing/filter_label.py">
+      <file leaf-file-name="renew_caption.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rico_caption/renew_caption.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+            <state relative-caret-position="-255">
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="caption_generator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rico_caption/caption_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="124" selection-start-line="1" selection-start-column="124" selection-end-line="1" selection-end-column="124" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coco_annotaiton_generator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rico_caption/coco_annotaiton_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_segment_tree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/main_segment_tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="77" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -23,11 +69,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rm_redundancy_flat.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rico_block_subtree/Rico_label_processing/rm_redundancy_flat.py">
+      <file leaf-file-name="label_filter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rico_label_processing/label_filter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-425">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="153">
+              <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="73" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,8 +100,6 @@
         <option value="$PROJECT_DIR$/rico_block_subtree/detect_block/main_select_classification.py" />
         <option value="$PROJECT_DIR$/rico_block_subtree/config/CONFIG.py" />
         <option value="$PROJECT_DIR$/rico_block_subtree/detect_block/main_select_multipro.py" />
-        <option value="$PROJECT_DIR$/rico_block_subtree/segment_subtree/main_segment_tree.py" />
-        <option value="$PROJECT_DIR$/rico_caption/caption_generator.py" />
         <option value="$PROJECT_DIR$/repetition_pattern_search/test2.py" />
         <option value="$PROJECT_DIR$/repetition_pattern_search/test.py" />
         <option value="$PROJECT_DIR$/repetition_pattern_search/Grammar_Tree.py" />
@@ -66,6 +113,11 @@
         <option value="$PROJECT_DIR$/rico_block_subtree/rico_label_processing/rm_redundancy_hierarchical.py" />
         <option value="$PROJECT_DIR$/rico_block_subtree/rico_label_processing/filter_label_hierarchical.py" />
         <option value="$PROJECT_DIR$/rico_block_subtree/Rico_label_processing/filter_label.py" />
+        <option value="$PROJECT_DIR$/rico_block_subtree/segment_subtree/main_segment_tree.py" />
+        <option value="$PROJECT_DIR$/rico_label_processing/filter_label.py" />
+        <option value="$PROJECT_DIR$/rico_caption/caption_generator.py" />
+        <option value="$PROJECT_DIR$/rico_label_processing/label_filter.py" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -100,7 +152,17 @@
               <item name="DataProcessing" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataProcessing" type="462c0819:PsiDirectoryNode" />
               <item name="rico_block_subtree" type="462c0819:PsiDirectoryNode" />
-              <item name="Rico_label_processing" type="462c0819:PsiDirectoryNode" />
+              <item name="detect_block" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="rico_caption" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataProcessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataProcessing" type="462c0819:PsiDirectoryNode" />
+              <item name="rico_label_processing" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -129,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.filter_label (1)">
+  <component name="RunManager" selected="Python.filter_label (2)">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
       <module name="DataProcessing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,6 +223,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rico_block_subtree/Rico_label_processing/filter_label.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="filter_label (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DataProcessing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rico_label_processing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rico_label_processing/filter_label.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -238,40 +318,22 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DataProcessing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/rico_block_subtree/rico_label_processing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rico_block_subtree/rico_label_processing/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.re-pair" />
       <item itemvalue="Python.rm_redundancy_hierarchical" />
       <item itemvalue="Python.filter_label_hierarchical" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.filter_label" />
       <item itemvalue="Python.filter_label (1)" />
+      <item itemvalue="Python.filter_label (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.filter_label (2)" />
         <item itemvalue="Python.filter_label (1)" />
         <item itemvalue="Python.filter_label" />
         <item itemvalue="Python.filter_label_hierarchical" />
         <item itemvalue="Python.rm_redundancy_hierarchical" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -288,15 +350,25 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3291592" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3291592" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291592" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -308,7 +380,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -373,76 +444,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="26" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/Grammar_Tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="30" lean-forward="true" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/Repetition_Identifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/re-pair.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/Grammar_Tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/detect_block/main_select_multipro.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/main_segment_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_caption/caption_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_caption/coco_annotaiton_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/detect_block/lib_ip/ip_preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rico_block_subtree/detect_block/config/CONFIG.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -522,48 +527,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/detect_block/main_select_classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="33" column="106" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rico_block_subtree/detect_block/lib_ip/ip_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_caption/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_caption/coco_annotaiton_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_caption/caption_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/main_segment_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -574,24 +541,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repetition_pattern_search/test3.py" />
-    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/Tree.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/repetition_pattern_search/re-pair.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -622,13 +572,6 @@
     <entry file="file://$PROJECT_DIR$/rico_block_subtree/rico_label_processing/adj_label_hierarchical.py" />
     <entry file="file://$PROJECT_DIR$/rico_block_subtree/rico_label_processing/test.py" />
     <entry file="file://$PROJECT_DIR$/rico_block_subtree/rico_label_processing/view_raw_data.py" />
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/view_subtree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repetition_pattern_search/Grammar_Tree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -671,20 +614,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rico_block_subtree/Rico_label_processing/rm_redundancy_flat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="66" column="56" lean-forward="true" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rico_block_subtree/Rico_label_processing/filter_label.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
+        <state relative-caret-position="891">
+          <caret line="68" column="30" lean-forward="true" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rico_block_subtree/Rico_label_processing/rm_redundancy_flat.py">
+    <entry file="file://$PROJECT_DIR$/rico_label_processing/Untitled.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_label_processing/count_class.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/Detected_Block.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="-435">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/Tree.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/view_subtree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_caption/renew_annotations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repetition_pattern_search/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_block_subtree/detect_block/main_select_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="33" column="106" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_label_processing/rm_redundancy_hierarchical.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="117" column="27" lean-forward="true" selection-start-line="117" selection-start-column="27" selection-end-line="117" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_label_processing/filter_label.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_caption/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_label_processing/label_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_block_subtree/segment_subtree/main_segment_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_caption/renew_caption.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_caption/caption_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="37" column="18" lean-forward="true" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rico_caption/coco_annotaiton_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="124" selection-start-line="1" selection-start-column="124" selection-end-line="1" selection-end-column="124" />
         </state>
       </provider>
     </entry>

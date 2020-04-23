@@ -79,7 +79,7 @@ if '__main__':
     start = 0  # start point
     end = 1000
     input_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
-    output_root = 'E:\\Temp\\rico-tree'
+    output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree\\'
     for index in range(start, end):
         img_path = input_root + 'all\\' + str(index) + '.jpg'
         json_path = input_root + 'simplified\\' + str(index) + '.json'
@@ -88,7 +88,7 @@ if '__main__':
             img = cv2.imread(img_path)
             objs = json.load(open(json_path, encoding="utf8"))
             if objs is not None:
-                objs = rm_repeated_objects(objs, 5)
+                # objs = rm_repeated_objects(objs, 5)
                 if show:
                     org = cv2.resize(img, (1440, 2560))
                     board = np.full((2560, 1440, 3), 255, dtype=np.uint8)  # used for draw new labels

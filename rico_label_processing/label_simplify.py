@@ -6,52 +6,6 @@ import os
 from os.path import join as pjoin
 
 
-def obj_is_same(obj_a, obj_b, gap):
-    if abs(obj_a['bounds'][0] - obj_b['bounds'][0]) < gap and \
-            abs(obj_a['bounds'][1] - obj_b['bounds'][1]) < gap and \
-            abs(obj_a['bounds'][2] - obj_b['bounds'][2]) < gap and \
-            abs(obj_a['bounds'][3] - obj_b['bounds'][3]) < gap:
-        return True
-    return False
-
-
-def rm_repeated_objects(node, gap):
-    if 'children' not in node:
-        return node
-    children = node['children']
-    children_new = []
-    children_grand = []
-
-    for child in children:
-        children_new.append(rm_repeated_objects(child, gap))
-
-    repeat = np.full(len(children_new), False)
-    for i in range(len(children_new)):
-        if obj_is_same(node, children_new[i], gap):
-            if 'children' in children_new[i]:
-                children_grand += children_new[i]['children']
-            repeat[i] = True
-            continue
-
-        if repeat[i]: continue
-
-        for j in range(i + 1, len(children_new)):
-            if obj_is_same(children_new[i], children_new[j], gap):
-                if 'children' in children_new[j]:
-                    if 'children' in children_new[i]:
-                        children_new[i]['children'] += children_new[j]['children']
-                    else:
-                        children_new[i]['children'] = children_new[j]['children']
-                repeat[j] = True
-
-    children_non_redundant = []
-    for i in range(len(repeat)):
-        if not repeat[i]:
-            children_non_redundant.append(children_new[i])
-    node['children'] = children_non_redundant + children_grand
-    return node
-
-
 def simplify_objects(root):
     def iter_kids(obj):
         if obj['bounds'][2] - obj['bounds'][0] == 0 or obj['bounds'][3] - obj['bounds'][1] == 0:
@@ -100,7 +54,6 @@ def draw_node(node, board, count, layer, shrink_ratio=4):
 if '__main__':
     save = False
     show = True
-    org = False
     start = 0  # start point
     end = 100000
     input_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
@@ -115,8 +68,6 @@ if '__main__':
             jfile = json.load(open(json_path, encoding="utf8"))
             objs = simplify_objects(jfile)
             if objs is not None:
-                if not org:
-                    objs = rm_repeated_objects(objs,5)
                 if show:
                     org = cv2.resize(img, (1440, 2560))
                     board = np.full((2560, 1440, 3), 255, dtype=np.uint8)  # used for draw new labels

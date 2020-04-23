@@ -35,7 +35,7 @@ def main():
     bad = 0
     img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
     segment_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'
-    output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico_caption'
+    output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption'
 
     for index in range(start, end):
         img_path = pjoin(img_root, str(index) + '.jpg')
