@@ -15,7 +15,7 @@ class Config:
         self.CTPN_PATH = "E:\\Mulong\\Model\\UI2CODE\\ctpn.pb"
 
         # setting data flow paths
-        self.ROOT_INPUT = "E:\\Mulong\\Datasets\\gui\\rico\\combined"
+        self.ROOT_INPUT = "E:\\Mulong\\Datasets\\gui\\rico\\combined\\all"
         self.ROOT_OUTPUT = "E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-json"
 
         # *** Frozen ***
