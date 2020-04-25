@@ -33,8 +33,8 @@ if '__main__':
     start = 0  # start point
     end = 100000
     image_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
-    # label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\simplified\\'
-    label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'
+    label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\simplified\\'
+    # label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'
     for index in range(start, end):
         img_path = image_root + str(index) + '.jpg'
         json_path = label_root + str(index) + '.json'
