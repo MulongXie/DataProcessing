@@ -31,7 +31,12 @@ class GUI_Block:
 
     def generate_caption(self):
         def generate_caption_by_class(tree, caption):
-            caption += tree['class'].split('.')[-1]
+            class_name = tree['class'].split('.')[-1]
+            if len(class_name) < 4:
+                if len(tree['class'].split('.')) > 1:
+                    print('**** too short ****', class_name, tree['class'].split('.')[-2])
+                    class_name = tree['class'].split('.')[-2]
+            caption += class_name
             self.caption_size += 1
             if 'children' in tree and len(tree['children']) > 0:
                 child_caption = ''
