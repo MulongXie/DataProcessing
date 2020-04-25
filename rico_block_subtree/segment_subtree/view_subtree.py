@@ -6,12 +6,9 @@ from os.path import join as pjoin
 import os
 
 
-def draw_tree(tree, board, line=-1, show_node=False):
+def draw_tree(tree, board, line=-1):
     color = (rint(0, 255), rint(0, 255), rint(0, 255))
     cv2.rectangle(board, (tree['bounds'][0], tree['bounds'][1]), (tree['bounds'][2], tree['bounds'][3]), color, line)
-    if show_node:
-        cv2.imshow('node', cv2.resize(board, (300, 500)))
-        cv2.waitKey()
     if 'children' not in tree:
         return
     for child in tree['children']:
@@ -31,12 +28,12 @@ def view_segments(segments, org):
         cv2.rectangle(board_block, (block[0], block[1]), (block[2], block[3]), (0,255,0), 5)
         cv2.imshow('seg_block', cv2.resize(board_block, (300, 500)))
         cv2.imshow('seg_tree', cv2.resize(board_tree, (300, 500)))
-        cv2.waitKey()
+        cv2.waitKey(100)
 
 
 if __name__ == '__main__':
     show = True
-    start = 0  # start point
+    start = 1000  # start point
     end = 100000
     img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
     segment_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'

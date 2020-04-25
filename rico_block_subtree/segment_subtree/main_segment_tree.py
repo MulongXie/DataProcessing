@@ -78,7 +78,7 @@ def main():
     bad_num = 0
     none_tree = 0
     num = 0
-    start = 0  # start point
+    start = 1094  # start point
     end = 100000
     img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
     block_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-json\\'

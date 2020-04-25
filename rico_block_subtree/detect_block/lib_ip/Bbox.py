@@ -72,18 +72,18 @@ class Bbox:
 
         # print('IoU:%.3f, IoA:%.3f, IoB:%.3f' % (iou, ioa, iob))
 
+        # not intersected with each other
+        if iou == 0:
+            return 0
+        # a and b are same
+        if iou >= 0.8 and ioa >= 0.85 and iob >= 0.85 and abs(ioa - iob) < 0.08:
+            return 3
         # contained by b
         if ioa >= 0.9:
             return -1
         # contains b
         if iob >= 0.9:
             return 1
-        # not intersected with each other
-        if iou == 0:
-            return 0
-        # a and b are same
-        if iou >= 0.8:
-            return 3
         # intersected
         return 2
 
