@@ -2,6 +2,8 @@ import json
 from os.path import join as pjoin
 from glob import glob
 import cv2
+import time
+from tqdm import tqdm
 
 img_id = 0
 
@@ -42,16 +44,18 @@ def cvt_coco_format(caption, clip_root):
 
 def main():
     cap_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption'
-    clip_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-clip'
-    caps = glob(pjoin(cap_root, '*.json'))
-    caps = sorted(caps, key=lambda x: int(x.split('\\')[-1][:-5]))
+    clip_root = 'E:\\Temp\\rico-block-clip'
+    caps = sorted(glob(pjoin(cap_root, '*.json')), key=lambda x: int(x.split('\\')[-1][:-5]))
     data = {'annotations':[], 'images':[]}
-    for i, cap_path in enumerate(caps):
-        print(i, cap_path, img_id)
+
+    pbar = tqdm(caps)
+    for i, cap_path in enumerate(pbar):
+        start = time.clock()
         cap = json.load(open(cap_path))
         anns, image = cvt_coco_format(cap, clip_root)
         data['annotations'] += anns
         data['images'] += image
+        pbar.set_description('[%.3fs] %s %d' % (time.clock() - start, cap_path, img_id))
 
     json.dump(data, open('coco.json', 'w'), indent=4)
 

@@ -20,7 +20,7 @@ def update_filename(data):
 
 data = json.load(open('coco.json'))
 update_filename(data)
-# update_id(data)
+update_id(data)
 json.dump(data, open('coco.json', 'w'), indent=4)
 print(data['images'][-1])
 print(data['annotations'][-1])

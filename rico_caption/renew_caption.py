@@ -17,7 +17,7 @@ def update_id(caption):
 
 
 ann_id = 0
-img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined'
+img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all'
 cap_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption'
 caps = glob(pjoin(cap_root, '*.json'))
 caps = sorted(caps, key=lambda x: int(x.split('\\')[-1][:-5]))
