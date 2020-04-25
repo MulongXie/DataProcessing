@@ -20,20 +20,22 @@ def resize_block(blocks, det_height, tgt_height, bias):
         block.resize_bbox(det_height, tgt_height, bias)
 
 
-def check_subtree(block, tree, test=False):
+def check_subtree(block, tree, org, test=False):
     '''
     check if the tree can be segmented by block
-    relation: -1 : a in b
-               0  : a, b are not intersected
-               1  : b in a
-               2  : a, b are identical or intersected
+    relation: -1 : block in tree
+               0  : block, tree are not intersected
+               1  : tree in block
+               2  : block, tree are intersected
+               3  : block and tree are same
     '''
     relation = block.relation(tree['bounds'])
     if test:
         print(relation, block.put_bbox(), tree['bounds'])
+        img = org.copy()
         board_test_blk = draw.draw_bounding_box(img, [block], line=5)
         board_test_tree = cv2.resize(img, (1440, 2560))
-        Tree.draw_tree(tree, board_test_tree, 0)
+        Tree.draw_tree(tree, board_test_tree)
         cv2.imshow('tree-test', cv2.resize(board_test_tree, (300, 500)))
         cv2.imshow('blk-test', cv2.resize(board_test_blk, (300, 500)))
         cv2.waitKey()
@@ -50,7 +52,7 @@ def check_subtree(block, tree, test=False):
             return None
         subtrees = []
         for child in tree['children']:
-            subtree = check_subtree(block, child)
+            subtree = check_subtree(block, child, org)
             if subtree is not None:
                 if type(subtree) is list:
                     subtrees += subtree
@@ -60,26 +62,27 @@ def check_subtree(block, tree, test=False):
             return None
 
 
-def segment_subtree(blocks, tree):
+def segment_subtree(blocks, tree, org):
     segmented_subtree = {'segments':[]}
     for block in blocks:
-        subtree = check_subtree(block, tree)
+        subtree = check_subtree(block, tree, org)
         if subtree is not None:
             segment = {'block': block.put_bbox(), 'subtree':subtree}
             segmented_subtree['segments'].append(segment)
     return segmented_subtree
 
 
-if '__main__':
+def main():
     save = True
     show = False
     bad_num = 0
+    none_tree = 0
     num = 0
     start = 0  # start point
     end = 100000
-    img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
+    img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
     block_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-json\\'
-    tree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree\\'
+    tree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'
     subtree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'
     for index in range(start, end):
         img_path = img_root + str(index) + '.jpg'
@@ -88,10 +91,6 @@ if '__main__':
         subtree_path = subtree_root + str(index) + '.json'
 
         if not os.path.exists(block_path) or not os.path.exists(tree_path):
-            continue
-
-        # ignore existing ones
-        if os.path.exists(subtree_path):
             continue
 
         start_time = time.clock()
@@ -105,9 +104,14 @@ if '__main__':
             tree = Tree.load_tree(tree_path)
         except:
             bad_num += 1
-            print('*** Fuck Json: %d %s ***' %(bad_num, tree_path))
+            print('*** Fuck Json: %d %s ***' % (bad_num, tree_path))
             continue
-        segments = segment_subtree(blocks, tree)
+        if tree is not None:
+            segments = segment_subtree(blocks, tree, img)
+        else:
+            none_tree += 1
+            print('*** Tree is None: %d %s ***' % (none_tree, tree_path))
+            continue
 
         if show:
             board_tree = np.full((2560, 1440, 3), 255, dtype=np.uint8)  # used for draw new labels
@@ -124,3 +128,7 @@ if '__main__':
 
         print('[%.3fs]: %d %s' % (time.clock() - start_time, num, img_path))
         num += 1
+
+
+if '__main__':
+    main()

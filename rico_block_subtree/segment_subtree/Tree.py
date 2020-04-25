@@ -51,11 +51,3 @@ def view_segments(segments, org):
         cv2.imshow('seg_block', cv2.resize(board_block, (300, 500)))
         cv2.imshow('seg_tree', cv2.resize(board_tree, (300, 500)))
         cv2.waitKey()
-
-
-class Tree:
-    def __init__(self):
-        self.class_name = None
-        self.bounds = None
-        self.children = None
-        self.parent = None

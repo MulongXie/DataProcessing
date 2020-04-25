@@ -7,17 +7,17 @@ import os
 def view_blocks(blocks, org):
     for block in blocks['blocks']:
         cv2.rectangle(org, (block['column_min'], block['row_min']),
-                      (block['column_max'], block['row_min']), (0,255,0), 2)
-    cv2.imshow('blocks', org)
+                      (block['column_max'], block['row_max']), (0,255,0), 3)
+    cv2.imshow('blocks', cv2.resize(org, (int(org.shape[1] / org.shape[0] * 500), 500)))
     cv2.waitKey()
 
 
 if __name__ == '__main__':
     show = True
-    start = 27  # start point
+    start = 0  # start point
     end = 100000
-    img_root = 'E:\\Mulong\\Datasets\\rico\\combined\\'
-    block_root = 'E:\\Temp\\rico-block\\'
+    img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all'
+    block_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-json'
 
     for index in range(start, end):
         img_path = pjoin(img_root, str(index) + '.jpg')
