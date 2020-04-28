@@ -17,10 +17,16 @@ rico_block_subtree / segment_subtree / main_segment_tree.py -> 'E:\\Mulong\\Data
 
 # *** 5 ***
 # generate caption for each segment
+# correct annotation id
 rico_caption / caption_generator.py -> 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption'
+rico_caption / renew_captions.py -> 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption'
 
 # *** 6 ***
 # convert caption annotations to coco format
 # clip segments (blocks with subtrees)
 rico_caption / coco_annotation_generator.py -> 'coco.json'
                                             -> 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-clip'
+
+# *** 7 ***
+# correct the image id and image name and annotation id
+rico_caption / renew_annotations.py -> 'coco.json'
