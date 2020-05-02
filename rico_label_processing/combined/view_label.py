@@ -33,9 +33,11 @@ if '__main__':
     start = 0  # start point
     end = 100000
     image_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
-    label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\simplified\\'
-    # label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'
-    for index in range(start, end):
+    # label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\simplified\\'            # original
+    label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'       # processed
+
+    index = start
+    while index < end:
         img_path = image_root + str(index) + '.jpg'
         json_path = label_root + str(index) + '.json'
         if os.path.exists(img_path) and os.path.exists(json_path):
@@ -50,9 +52,7 @@ if '__main__':
                 board = np.full((2560, 1440, 3), 255, dtype=np.uint8)  # used for draw new labels
                 cv2.imshow('org', shrink(org, 4))
                 draw_node(tree, board, 0)
-                cv2.imshow('board', shrink(board, 4))
-                cv2.waitKey()
+                # cv2.imshow('board', shrink(board, 4))
+                # cv2.waitKey()
 
-        index += 1
-        if index > end:
-            break
+        index += rint(0, 20)
