@@ -7,21 +7,20 @@ from os.path import join as pjoin
 import pandas as pd
 
 
-def check_class_and_size(node, compos_select):
+def check_class_and_size(node, compo_map):
     # filter by size
     if node['bounds'][2] - node['bounds'][0] < 10 or node['bounds'][3] - node['bounds'][1] < 10:
         node['class'] = 'invalid'
     # filter by class
     else:
-        cat = compos_select[compos_select['class_name'] == node['class']]['category'].values
-        if len(cat) == 0:
+        if node['class'] not in compo_map:
             node['class'] = 'invalid'
         else:
-            node['class'] = cat[0]
+            node['class'] = compo_map[node['class']]
 
     if 'children' in node:
         for i, child in enumerate(node['children']):
-            check_class_and_size(child, compos_select)
+            check_class_and_size(child, compo_map)
 
 
 def rm_invalid_nodes(node):
@@ -39,8 +38,8 @@ def rm_invalid_nodes(node):
     node['children'] = children_new
 
 
-def prune_tree(tree, compos_select):
-    check_class_and_size(tree, compos_select)
+def prune_tree(tree, compo_map):
+    check_class_and_size(tree, compo_map)
     rm_invalid_nodes(tree)
 
 
@@ -118,11 +117,15 @@ def draw_node(node, board, layer, shrink_ratio=4):
 def main():
     save = True
     show = False
-    start = 487  # start point
+    start = 64526  # start point
     end = 100000
     none_tree = 0
 
     compos_select = pd.read_csv('rico_class_widget_layout.csv', index_col=0)
+    compo_map = {}
+    for i in range(len(compos_select)):
+        compo_map[compos_select.iloc[i]['class_name']] = compos_select.iloc[i]['category']
+
     input_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\'
     output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\widget-layout\\'
     for index in range(start, end):
@@ -132,7 +135,7 @@ def main():
             print(json_path)
             ui_tree = json.load(open(json_path, encoding="utf8"))
             if ui_tree is not None:
-                prune_tree(ui_tree, compos_select)
+                prune_tree(ui_tree, compo_map)
 
                 ui_tree = rm_repeated_objects(ui_tree, 5)
                 if ui_tree is None:

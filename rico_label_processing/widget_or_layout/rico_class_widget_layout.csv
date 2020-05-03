@@ -97,7 +97,6 @@
 101,com.wsi.android.weather.ui.widget.customfont.CustomFontTextView,1547,widget
 102,android.widget.ViewFlipper,1537,layout
 103,android.support.v7.widget.n,1518,widget
-104,android.support.design.widget.TextInputLayout,1505,widget
 104,android.support.design.widget.TextInputLayout,1505,layout
 107,com.android.internal.widget.ScrollingTabContainerView$TabView,1488,layout
 109,de.hdodenhof.circleimageview.CircleImageView,1442,widget
