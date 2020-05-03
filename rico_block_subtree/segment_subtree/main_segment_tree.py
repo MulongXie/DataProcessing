@@ -78,12 +78,12 @@ def main():
     bad_num = 0
     none_tree = 0
     num = 0
-    start = 1094  # start point
+    start = 19558  # start point
     end = 100000
     img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
-    block_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block-json\\'
-    tree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'
-    subtree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'
+    block_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-block\\json\\'
+    tree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\widget-layout\\'
+    subtree_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\widget-layout\\'
     for index in range(start, end):
         img_path = img_root + str(index) + '.jpg'
         block_path = block_root + str(index) + '.json'
