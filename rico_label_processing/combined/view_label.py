@@ -20,7 +20,7 @@ def draw_node(node, board, layer, shrink_ratio=4, show_node=True):
     if show_node:
         print(node['class'])
         cv2.imshow('board', shrink(board, shrink_ratio))
-        cv2.waitKey()
+        cv2.waitKey(100)
 
     if 'children' not in node:
         return
@@ -34,7 +34,7 @@ if '__main__':
     end = 100000
     image_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
     # label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\simplified\\'            # original
-    label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\'       # processed
+    label_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-tree-filtered\\widget-layout\\'       # processed
 
     index = start
     while index < end:

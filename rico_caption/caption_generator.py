@@ -34,8 +34,8 @@ def main():
     gui_block_id = 0
     bad = 0
     img_root = 'E:\\Mulong\\Datasets\\gui\\rico\\combined\\all\\'
-    segment_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\'
-    output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption\\'
+    segment_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-subtree\\widget-layout\\'
+    output_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption\\widget-layout\\'
 
     for index in range(start, end):
         img_path = pjoin(img_root, str(index) + '.jpg')
@@ -46,7 +46,7 @@ def main():
             continue
         segments = json.load(open(segment_path))
         gui_block_id = init_GUI_blocks(gui_block_id, img_path, segments, output_path, show=False)
-        print('[%.3fs]' %(time.clock() - time_s), segment_path)
+        print('Caption Generator [%.3fs]' %(time.clock() - time_s), segment_path)
 
 
 if __name__ == '__main__':

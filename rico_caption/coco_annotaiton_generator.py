@@ -43,7 +43,7 @@ def cvt_coco_format(caption, clip_root):
 
 
 def main():
-    cap_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption'
+    cap_root = 'E:\\Mulong\\Datasets\\gui\\rico\\subtree\\rico-caption\\widget-layout'
     clip_root = 'E:\\Temp\\rico-block-clip'
     caps = sorted(glob(pjoin(cap_root, '*.json')), key=lambda x: int(x.split('\\')[-1][:-5]))
     data = {'annotations':[], 'images':[]}
@@ -55,7 +55,7 @@ def main():
         anns, image = cvt_coco_format(cap, clip_root)
         data['annotations'] += anns
         data['images'] += image
-        pbar.set_description('[%.3fs] %s %d' % (time.clock() - start, cap_path, img_id))
+        pbar.set_description('COCO Generator [%.3fs] %s %d' % (time.clock() - start, cap_path, img_id))
 
     json.dump(data, open('coco.json', 'w'), indent=4)
 
